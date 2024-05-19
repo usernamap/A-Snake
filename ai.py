@@ -103,3 +103,42 @@ def bfs(start, end, snake_body, grid_size):
             if new_node.position not in closed_list:
                 queue.append(new_node)
     return None
+
+
+def follow_tail(snake_body, grid_size):
+    tail = snake_body[-1]
+    queue = deque([Node(snake_body[0])])
+    closed_list = set()
+    directions = [
+        np.array([0, -1]),
+        np.array([0, 1]),
+        np.array([-1, 0]),
+        np.array([1, 0]),
+    ]
+
+    while queue:
+        current_node = queue.popleft()
+        closed_list.add(current_node.position)
+        if current_node.position == tail:
+            path = []
+            current = current_node
+            while current:
+                path.append(current.position)
+                current = current.parent
+            return path[::-1]
+
+        for direction in directions:
+            new_position = tuple(np.array(current_node.position) + direction)
+            if (
+                new_position[0] < 0
+                or new_position[0] >= grid_size
+                or new_position[1] < 0
+                or new_position[1] >= grid_size
+                or new_position in closed_list
+                or any(np.array_equal(new_position, segment) for segment in snake_body)
+            ):
+                continue
+            new_node = Node(new_position, current_node)
+            if new_node.position not in closed_list:
+                queue.append(new_node)
+    return None

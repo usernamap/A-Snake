@@ -1,7 +1,7 @@
 import random
 import logging
 from game_config import *
-from ai import astar, bfs
+from ai import astar, bfs, follow_tail
 import numpy as np
 
 # Logging setup
@@ -184,6 +184,8 @@ class SnakeGame:
             path = astar(tuple(self.snake[0]), tuple(self.food), self.snake, NB_CASES)
             if not path:
                 path = bfs(tuple(self.snake[0]), tuple(self.food), self.snake, NB_CASES)
+            if not path:
+                path = follow_tail(self.snake, NB_CASES)
             if path and len(path) > 1:
                 next_move = np.array(path[1]) - np.array(path[0])
                 reward, done = self.run_step(next_move)
