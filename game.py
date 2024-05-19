@@ -1,8 +1,7 @@
-# game.py
 import random
 import logging
 from game_config import *
-from ai import astar
+from ai import astar, bfs
 import numpy as np
 
 # Logging setup
@@ -12,6 +11,7 @@ logging.basicConfig(
     filemode="w",
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
+
 try:
     import pygame
 except ImportError:
@@ -23,17 +23,16 @@ class SnakeGame:
         self.visualize = visualize
         self.real_time_visualize = real_time_visualize
         self.display_mode = display_mode
-        if display_mode == "full":
-            if pygame:
-                pygame.init()
-                self.width = self.height = TAILLE_CASE * NB_CASES
-                self.screen = pygame.display.set_mode((self.width, self.height + 40))
-                self.clock = pygame.time.Clock()
-                self.font = pygame.font.Font(None, POLICE_TAILLE)
-            else:
-                raise ImportError(
-                    "Pygame is not available but DISPLAY_MODE is set to full."
-                )
+        if display_mode == "full" and pygame:
+            pygame.init()
+            self.width = self.height = TAILLE_CASE * NB_CASES
+            self.screen = pygame.display.set_mode((self.width, self.height + 40))
+            self.clock = pygame.time.Clock()
+            self.font = pygame.font.Font(None, POLICE_TAILLE)
+        elif display_mode == "full":
+            raise ImportError(
+                "Pygame is not available but DISPLAY_MODE is set to full."
+            )
         self.total_steps = 0
         self.best_score = self.load_best_score()
         self.reset_game()
@@ -183,6 +182,8 @@ class SnakeGame:
         self.reset_game()
         while not self.done:
             path = astar(tuple(self.snake[0]), tuple(self.food), self.snake, NB_CASES)
+            if not path:
+                path = bfs(tuple(self.snake[0]), tuple(self.food), self.snake, NB_CASES)
             if path and len(path) > 1:
                 next_move = np.array(path[1]) - np.array(path[0])
                 reward, done = self.run_step(next_move)

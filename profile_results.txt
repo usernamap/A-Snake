@@ -1,60 +1,60 @@
-Sun May 19 21:32:34 2024    profile_stats
+Sun May 19 22:17:38 2024    profile_stats
 
-         597840 function calls (597122 primitive calls) in 0.217 seconds
+         145866347 function calls (145863673 primitive calls) in 37.814 seconds
 
    Ordered by: cumulative time
-   List reduced from 154 to 50 due to restriction <50>
+   List reduced from 111 to 50 due to restriction <50>
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.217    0.217 {built-in method builtins.exec}
-        1    0.000    0.000    0.217    0.217 <string>:1(<module>)
-        1    0.000    0.000    0.217    0.217 /Users/root1/Desktop/A-Snake/main.py:10(main)
-        1    0.001    0.001    0.217    0.217 /Users/root1/Desktop/A-Snake/game.py:182(run_with_ai)
-      172    0.011    0.000    0.186    0.001 /Users/root1/Desktop/A-Snake/ai.py:20(astar)
-     6658    0.007    0.000    0.180    0.000 {built-in method builtins.any}
-    47835    0.014    0.000    0.162    0.000 /Users/root1/Desktop/A-Snake/ai.py:59(<genexpr>)
-    46757    0.016    0.000    0.157    0.000 <__array_function__ internals>:177(array_equal)
-    47817    0.013    0.000    0.142    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
-    46757    0.043    0.000    0.125    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/numeric.py:2407(array_equal)
-    46757    0.011    0.000    0.056    0.000 {method 'all' of 'numpy.ndarray' objects}
-    46757    0.009    0.000    0.045    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/_methods.py:61(_all)
-    47475    0.037    0.000    0.037    0.000 {method 'reduce' of 'numpy.ufunc' objects}
-      171    0.002    0.000    0.029    0.000 /Users/root1/Desktop/A-Snake/game.py:72(run_step)
-   140972    0.026    0.000    0.026    0.000 {built-in method numpy.asarray}
-      359    0.000    0.000    0.014    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:1571(_array_str_implementation)
-      359    0.001    0.000    0.014    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:561(array2string)
-      359    0.001    0.000    0.012    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:506(wrapper)
-      359    0.001    0.000    0.011    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:523(_array2string)
-      171    0.000    0.000    0.008    0.000 /Users/root1/Desktop/A-Snake/game.py:117(check_collision)
-     2162    0.001    0.000    0.007    0.000 /Users/root1/Desktop/A-Snake/game.py:123(<genexpr>)
-      359    0.001    0.000    0.006    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:452(_get_format_function)
-      359    0.000    0.000    0.005    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:410(<lambda>)
-      359    0.001    0.000    0.005    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:1223(__init__)
-      359    0.000    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:780(_formatArray)
-    46757    0.004    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/numeric.py:2403(_array_equal_dispatcher)
- 1077/359    0.002    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:789(recurser)
-    20343    0.003    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/ai.py:70(<genexpr>)
-      171    0.000    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/game.py:107(move_snake)
-      718    0.001    0.000    0.002    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:69(_wrapreduction)
-      359    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(amax)
-      342    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(norm)
-       24    0.000    0.000    0.002    0.000 /Users/root1/Desktop/A-Snake/game.py:64(place_food)
-      359    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(amin)
-      359    0.000    0.000    0.002    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:2703(amax)
-     2796    0.001    0.000    0.002    0.000 {built-in method _heapq.heappush}
-      342    0.001    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/linalg/linalg.py:2342(norm)
-      359    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:2829(amin)
-      221    0.001    0.000    0.001    0.000 {built-in method builtins.print}
-      718    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:753(_extendLine_pretty)
-       25    0.000    0.000    0.001    0.000 {built-in method builtins.all}
-      281    0.000    0.000    0.001    0.000 /Users/root1/Desktop/A-Snake/game.py:67(<genexpr>)
-      359    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:64(_make_options_dict)
-     1494    0.001    0.000    0.001    0.000 {built-in method _heapq.heappop}
-     7917    0.001    0.000    0.001    0.000 /Users/root1/Desktop/A-Snake/ai.py:16(__lt__)
-     3335    0.001    0.000    0.001    0.000 /Users/root1/Desktop/A-Snake/ai.py:9(__init__)
-      718    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:739(_extendLine)
-     8120    0.000    0.000    0.000    0.000 {built-in method builtins.len}
-      359    0.000    0.000    0.000    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:403(_get_formatdict)
-     1028    0.000    0.000    0.000    0.000 {built-in method numpy.array}
+        1    0.000    0.000   37.814   37.814 {built-in method builtins.exec}
+        1    0.000    0.000   37.814   37.814 <string>:1(<module>)
+        1    0.000    0.000   37.814   37.814 /Users/root1/Desktop/A-Snake/main.py:14(main)
+        1    0.003    0.003   37.814   37.814 /Users/root1/Desktop/A-Snake/game.py:181(run_with_ai)
+   316124    0.866    0.000   36.640    0.000 {built-in method builtins.any}
+        1    0.794    0.794   36.258   36.258 /Users/root1/Desktop/A-Snake/ai.py:70(bfs)
+ 12844777    2.711    0.000   34.439    0.000 /Users/root1/Desktop/A-Snake/ai.py:99(<genexpr>)
+ 13035511    3.478    0.000   32.938    0.000 <__array_function__ internals>:177(array_equal)
+ 13039459    2.683    0.000   28.714    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+ 13035511    8.982    0.000   26.019    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/numeric.py:2407(array_equal)
+ 13035511    2.059    0.000   11.396    0.000 {method 'all' of 'numpy.ndarray' objects}
+ 13035511    1.844    0.000    9.337    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/_methods.py:61(_all)
+ 13038185    7.496    0.000    7.496    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+ 39109144    5.641    0.000    5.641    0.000 {built-in method numpy.asarray}
+      638    0.068    0.000    1.449    0.002 /Users/root1/Desktop/A-Snake/ai.py:20(astar)
+   471600    0.103    0.000    1.275    0.000 /Users/root1/Desktop/A-Snake/ai.py:52(<genexpr>)
+ 13035511    0.759    0.000    0.759    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/numeric.py:2403(_array_equal_dispatcher)
+   591961    0.133    0.000    0.133    0.000 {built-in method numpy.array}
+      637    0.006    0.000    0.102    0.000 /Users/root1/Desktop/A-Snake/game.py:71(run_step)
+   285537    0.052    0.000    0.052    0.000 /Users/root1/Desktop/A-Snake/ai.py:9(__init__)
+     1337    0.001    0.000    0.042    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:1571(_array_str_implementation)
+     1337    0.002    0.000    0.041    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:561(array2string)
+      637    0.001    0.000    0.040    0.000 /Users/root1/Desktop/A-Snake/game.py:116(check_collision)
+    13868    0.003    0.000    0.038    0.000 /Users/root1/Desktop/A-Snake/game.py:122(<genexpr>)
+     1337    0.002    0.000    0.035    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:506(wrapper)
+     1337    0.003    0.000    0.033    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:523(_array2string)
+   215503    0.025    0.000    0.025    0.000 /Users/root1/Desktop/A-Snake/ai.py:61(<genexpr>)
+   148370    0.018    0.000    0.018    0.000 {method 'add' of 'set' objects}
+     1337    0.003    0.000    0.018    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:452(_get_format_function)
+   264594    0.016    0.000    0.016    0.000 {method 'append' of 'collections.deque' objects}
+     1337    0.001    0.000    0.014    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:410(<lambda>)
+     1337    0.003    0.000    0.013    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:1223(__init__)
+     1337    0.001    0.000    0.012    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:780(_formatArray)
+4011/1337    0.006    0.000    0.011    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:789(recurser)
+    16942    0.006    0.000    0.010    0.000 {built-in method _heapq.heappush}
+   138995    0.009    0.000    0.009    0.000 {method 'popleft' of 'collections.deque' objects}
+      637    0.001    0.000    0.007    0.000 /Users/root1/Desktop/A-Snake/game.py:106(move_snake)
+    64468    0.006    0.000    0.006    0.000 /Users/root1/Desktop/A-Snake/ai.py:16(__lt__)
+     8038    0.004    0.000    0.006    0.000 {built-in method _heapq.heappop}
+     2674    0.002    0.000    0.006    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:69(_wrapreduction)
+     1274    0.001    0.000    0.005    0.000 <__array_function__ internals>:177(norm)
+     1337    0.001    0.000    0.005    0.000 <__array_function__ internals>:177(amax)
+     1274    0.002    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/linalg/linalg.py:2342(norm)
+     1337    0.001    0.000    0.004    0.000 <__array_function__ internals>:177(amin)
+     1337    0.001    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:2703(amax)
+     2674    0.001    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:753(_extendLine_pretty)
+       47    0.000    0.000    0.004    0.000 /Users/root1/Desktop/A-Snake/game.py:63(place_food)
+       49    0.000    0.000    0.003    0.000 {built-in method builtins.all}
+     1337    0.002    0.000    0.003    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:64(_make_options_dict)
+     1337    0.001    0.000    0.003    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:2829(amin)
 
 
