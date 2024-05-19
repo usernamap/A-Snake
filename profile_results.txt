@@ -1,60 +1,60 @@
-Sun May 19 20:22:22 2024    profile_stats
+Sun May 19 21:32:34 2024    profile_stats
 
-         101921 function calls in 0.485 seconds
+         597840 function calls (597122 primitive calls) in 0.217 seconds
 
    Ordered by: cumulative time
-   List reduced from 100 to 50 due to restriction <50>
+   List reduced from 154 to 50 due to restriction <50>
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.485    0.485 {built-in method builtins.exec}
-        1    0.000    0.000    0.485    0.485 <string>:1(<module>)
-        1    0.000    0.000    0.485    0.485 /Users/root1/Desktop/A-Snake/main.py:10(main)
-        1    0.002    0.002    0.484    0.484 /Users/root1/Desktop/A-Snake/game.py:176(run_with_ai)
-      262    0.439    0.002    0.445    0.002 /Users/root1/Desktop/A-Snake/ai.py:15(astar)
-      564    0.001    0.000    0.025    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1610(_log)
-      261    0.003    0.000    0.024    0.000 /Users/root1/Desktop/A-Snake/game.py:73(run_step)
-      564    0.000    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1636(handle)
-      302    0.000    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:2140(info)
-      302    0.000    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1479(info)
-      564    0.001    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1690(callHandlers)
-      564    0.001    0.000    0.013    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:965(handle)
-      261    0.000    0.000    0.013    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:2150(debug)
-      261    0.000    0.000    0.012    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1467(debug)
-      564    0.000    0.000    0.012    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1216(emit)
-      564    0.001    0.000    0.012    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1098(emit)
-      564    0.000    0.000    0.007    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1595(makeRecord)
-      564    0.003    0.000    0.007    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:292(__init__)
-      564    0.001    0.000    0.006    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1087(flush)
-      564    0.000    0.000    0.005    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:942(format)
-      564    0.001    0.000    0.005    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:674(format)
-      564    0.004    0.000    0.004    0.000 {method 'flush' of '_io.TextIOWrapper' objects}
-      564    0.001    0.000    0.003    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1561(findCaller)
-      564    0.003    0.000    0.003    0.000 {built-in method builtins.print}
-    13712    0.003    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/ai.py:7(__init__)
-      522    0.000    0.000    0.003    0.000 <__array_function__ internals>:177(norm)
-      261    0.000    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/game.py:102(move_snake)
-      522    0.000    0.000    0.002    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
-      564    0.001    0.000    0.002    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:606(formatTime)
-      522    0.001    0.000    0.002    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/linalg/linalg.py:2342(norm)
-    33430    0.002    0.000    0.002    0.000 {method 'append' of 'list' objects}
-     2256    0.001    0.000    0.002    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:194(_is_internal_frame)
-       20    0.000    0.000    0.002    0.000 /Users/root1/Desktop/A-Snake/game.py:65(place_food)
-      564    0.000    0.000    0.001    0.000 <frozen posixpath>:117(splitext)
-      564    0.001    0.000    0.001    0.000 {built-in method time.strftime}
-      564    0.001    0.000    0.001    0.000 <frozen posixpath>:140(basename)
-      564    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:658(formatMessage)
-     2256    0.001    0.000    0.001    0.000 <frozen posixpath>:52(normcase)
-      564    0.001    0.000    0.001    0.000 <frozen genericpath>:121(_splitext)
-      564    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:447(format)
-     1128    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:922(acquire)
-      564    0.001    0.000    0.001    0.000 {built-in method time.localtime}
-     1044    0.001    0.000    0.001    0.000 {built-in method numpy.array}
-      564    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:652(usesTime)
-     1128    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:929(release)
-     4252    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
-      564    0.000    0.000    0.000    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:440(_format)
-      522    0.000    0.000    0.000    0.000 {method 'dot' of 'numpy.ndarray' objects}
-      564    0.000    0.000    0.000    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:432(usesTime)
-     1692    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+        1    0.000    0.000    0.217    0.217 {built-in method builtins.exec}
+        1    0.000    0.000    0.217    0.217 <string>:1(<module>)
+        1    0.000    0.000    0.217    0.217 /Users/root1/Desktop/A-Snake/main.py:10(main)
+        1    0.001    0.001    0.217    0.217 /Users/root1/Desktop/A-Snake/game.py:182(run_with_ai)
+      172    0.011    0.000    0.186    0.001 /Users/root1/Desktop/A-Snake/ai.py:20(astar)
+     6658    0.007    0.000    0.180    0.000 {built-in method builtins.any}
+    47835    0.014    0.000    0.162    0.000 /Users/root1/Desktop/A-Snake/ai.py:59(<genexpr>)
+    46757    0.016    0.000    0.157    0.000 <__array_function__ internals>:177(array_equal)
+    47817    0.013    0.000    0.142    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    46757    0.043    0.000    0.125    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/numeric.py:2407(array_equal)
+    46757    0.011    0.000    0.056    0.000 {method 'all' of 'numpy.ndarray' objects}
+    46757    0.009    0.000    0.045    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/_methods.py:61(_all)
+    47475    0.037    0.000    0.037    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+      171    0.002    0.000    0.029    0.000 /Users/root1/Desktop/A-Snake/game.py:72(run_step)
+   140972    0.026    0.000    0.026    0.000 {built-in method numpy.asarray}
+      359    0.000    0.000    0.014    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:1571(_array_str_implementation)
+      359    0.001    0.000    0.014    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:561(array2string)
+      359    0.001    0.000    0.012    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:506(wrapper)
+      359    0.001    0.000    0.011    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:523(_array2string)
+      171    0.000    0.000    0.008    0.000 /Users/root1/Desktop/A-Snake/game.py:117(check_collision)
+     2162    0.001    0.000    0.007    0.000 /Users/root1/Desktop/A-Snake/game.py:123(<genexpr>)
+      359    0.001    0.000    0.006    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:452(_get_format_function)
+      359    0.000    0.000    0.005    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:410(<lambda>)
+      359    0.001    0.000    0.005    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:1223(__init__)
+      359    0.000    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:780(_formatArray)
+    46757    0.004    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/numeric.py:2403(_array_equal_dispatcher)
+ 1077/359    0.002    0.000    0.004    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:789(recurser)
+    20343    0.003    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/ai.py:70(<genexpr>)
+      171    0.000    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/game.py:107(move_snake)
+      718    0.001    0.000    0.002    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:69(_wrapreduction)
+      359    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(amax)
+      342    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(norm)
+       24    0.000    0.000    0.002    0.000 /Users/root1/Desktop/A-Snake/game.py:64(place_food)
+      359    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(amin)
+      359    0.000    0.000    0.002    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:2703(amax)
+     2796    0.001    0.000    0.002    0.000 {built-in method _heapq.heappush}
+      342    0.001    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/linalg/linalg.py:2342(norm)
+      359    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/fromnumeric.py:2829(amin)
+      221    0.001    0.000    0.001    0.000 {built-in method builtins.print}
+      718    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:753(_extendLine_pretty)
+       25    0.000    0.000    0.001    0.000 {built-in method builtins.all}
+      281    0.000    0.000    0.001    0.000 /Users/root1/Desktop/A-Snake/game.py:67(<genexpr>)
+      359    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:64(_make_options_dict)
+     1494    0.001    0.000    0.001    0.000 {built-in method _heapq.heappop}
+     7917    0.001    0.000    0.001    0.000 /Users/root1/Desktop/A-Snake/ai.py:16(__lt__)
+     3335    0.001    0.000    0.001    0.000 /Users/root1/Desktop/A-Snake/ai.py:9(__init__)
+      718    0.000    0.000    0.001    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:739(_extendLine)
+     8120    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      359    0.000    0.000    0.000    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/core/arrayprint.py:403(_get_formatdict)
+     1028    0.000    0.000    0.000    0.000 {built-in method numpy.array}
 
 

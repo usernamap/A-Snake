@@ -1,7 +1,7 @@
 # game_config.py
 # Paramètres de l'environnement de jeu
 TAILLE_CASE = 20  # Taille d'une case en pixels
-NB_CASES = 20  # Nombre de cases sur un côté de la grille
+NB_CASES = 10  # Nombre de cases sur un côté de la grille
 
 # Paramètres visuels
 COULEUR_SERPENT = (144, 238, 144)  # Vert clair
@@ -19,7 +19,7 @@ PENALTY_COLLISION = -5  # Pénalité pour collision avec soi-même ou les bords 
 REWARD_CLOSE_FOOD = 1  # Récompense pour se rapprocher de la nourriture
 
 # Paramètres de performance
-FPS = 1  # Nombre d'images par seconde pour l'animation
+FPS = 100  # Nombre d'images par seconde pour l'animation
 
 # Paramètres de l'interface utilisateur
 REAL_TIME_VISUALIZATION = (

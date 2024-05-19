@@ -51,7 +51,7 @@ class SnakeGame:
 
     def reset_game(self):
         self.snake = [self.get_center()]
-        self.direction = pygame.math.Vector2(0, -1)  # Start moving up
+        self.direction = np.array([0, -1])  # Start moving up
         self.food = self.place_food()
         self.score = 0
         self.done = False
@@ -59,12 +59,12 @@ class SnakeGame:
         print("Game reset.")
 
     def get_center(self):
-        return NB_CASES // 2, NB_CASES // 2
+        return (NB_CASES // 2, NB_CASES // 2)
 
     def place_food(self):
         while True:
             pos = (random.randint(0, NB_CASES - 1), random.randint(0, NB_CASES - 1))
-            if pos not in self.snake:
+            if all(not np.array_equal(pos, segment) for segment in self.snake):
                 logging.info(f"Food placed at {pos}.")
                 print(f"Food placed at {pos}.")
                 return pos
@@ -94,12 +94,18 @@ class SnakeGame:
             f"Step: {self.total_steps}, Move: {direction}, Reward: {reward}, New Head: {new_head}"
         )
 
+        if len(self.snake) == NB_CASES * NB_CASES:
+            self.done = True
+            self.draw_winner()
+            print("The snake has filled the grid. You win!")
+            return reward, self.done
+
         if self.visualize and self.display_mode == "full":
             self.update_screen()
         return reward, self.done
 
     def move_snake(self, new_head):
-        if new_head == self.food:
+        if np.array_equal(new_head, self.food):
             self.score += REWARD_APPLE
             self.food = self.place_food()
             logging.info(f"Food eaten at {new_head}. New score: {self.score}.")
@@ -114,7 +120,7 @@ class SnakeGame:
             or new_head[0] >= NB_CASES
             or new_head[1] < 0
             or new_head[1] >= NB_CASES
-            or new_head in self.snake[1:]
+            or any(np.array_equal(new_head, segment) for segment in self.snake[1:])
         )
         if collision:
             logging.warning(f"Collision detected at {new_head}.")
@@ -130,21 +136,22 @@ class SnakeGame:
             self.clock.tick(FPS)
 
     def draw_elements(self):
-        for segment in self.snake:
-            rect = pygame.Rect(
-                segment[0] * TAILLE_CASE,
-                segment[1] * TAILLE_CASE,
+        if self.display_mode == "full":
+            for segment in self.snake:
+                rect = pygame.Rect(
+                    segment[0] * TAILLE_CASE,
+                    segment[1] * TAILLE_CASE,
+                    TAILLE_CASE,
+                    TAILLE_CASE,
+                )
+                pygame.draw.rect(self.screen, COULEUR_SERPENT, rect)
+            apple_rect = pygame.Rect(
+                self.food[0] * TAILLE_CASE,
+                self.food[1] * TAILLE_CASE,
                 TAILLE_CASE,
                 TAILLE_CASE,
             )
-            pygame.draw.rect(self.screen, COULEUR_SERPENT, rect)
-        apple_rect = pygame.Rect(
-            self.food[0] * TAILLE_CASE,
-            self.food[1] * TAILLE_CASE,
-            TAILLE_CASE,
-            TAILLE_CASE,
-        )
-        pygame.draw.ellipse(self.screen, COULEUR_NOURRITURE, apple_rect)
+            pygame.draw.ellipse(self.screen, COULEUR_NOURRITURE, apple_rect)
 
     def draw_info(self):
         if self.display_mode == "full":
@@ -175,13 +182,10 @@ class SnakeGame:
     def run_with_ai(self):
         self.reset_game()
         while not self.done:
-            path = astar(self.snake[0], self.food, self.snake, NB_CASES)
+            path = astar(tuple(self.snake[0]), tuple(self.food), self.snake, NB_CASES)
             if path and len(path) > 1:
-                next_move = pygame.math.Vector2(
-                    path[1][0], path[1][1]
-                ) - pygame.math.Vector2(path[0][0], path[0][1])
+                next_move = np.array(path[1]) - np.array(path[0])
                 reward, done = self.run_step(next_move)
-                # Réduisez la fréquence des journaux d'information
                 if self.total_steps % 10 == 0:
                     logging.info(
                         f"Path found. Next move: {next_move}. Reward: {reward}."
@@ -200,5 +204,5 @@ class SnakeGame:
                 print(f"Game Over. Score: {self.score}, Best score: {self.best_score}")
                 break
 
-            if self.visualize and DISPLAY_MODE == "full":
+            if self.visualize and self.display_mode == "full":
                 self.update_screen()

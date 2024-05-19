@@ -10,7 +10,7 @@ import pstats
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "console":
         display_mode = "console"
-    if len(sys.argv) > 1 and sys.argv[1] == "full":
+    elif len(sys.argv) > 1 and sys.argv[1] == "full":
         display_mode = "full"
     else:
         display_mode = DISPLAY_MODE

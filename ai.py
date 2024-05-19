@@ -1,6 +1,8 @@
 # ai.py
 import pygame
 from game_config import *
+import heapq
+import numpy as np
 
 
 class Node:
@@ -11,14 +13,17 @@ class Node:
         self.h = 0
         self.f = 0
 
+    def __lt__(self, other):
+        return self.f < other.f
+
 
 def astar(start, end, snake_body, grid_size):
     open_list = []
-    closed_list = []
+    closed_list = set()
 
     start_node = Node(start)
     end_node = Node(end)
-    open_list.append(start_node)
+    heapq.heappush(open_list, start_node)
 
     directions = [
         pygame.math.Vector2(0, -1),
@@ -28,15 +33,8 @@ def astar(start, end, snake_body, grid_size):
     ]
 
     while open_list:
-        current_node = open_list[0]
-        current_index = 0
-        for index, node in enumerate(open_list):
-            if node.f < current_node.f:
-                current_node = node
-                current_index = index
-
-        open_list.pop(current_index)
-        closed_list.append(current_node)
+        current_node = heapq.heappop(open_list)
+        closed_list.add(current_node.position)
 
         if current_node.position == end_node.position:
             path = []
@@ -46,7 +44,6 @@ def astar(start, end, snake_body, grid_size):
                 current = current.parent
             return path[::-1]
 
-        children = []
         for direction in directions:
             new_position = (
                 current_node.position[0] + int(direction.x),
@@ -58,30 +55,24 @@ def astar(start, end, snake_body, grid_size):
                 or new_position[0] < 0
                 or new_position[1] > (grid_size - 1)
                 or new_position[1] < 0
+                or new_position in closed_list
+                or any(np.array_equal(new_position, segment) for segment in snake_body)
             ):
                 continue
 
-            if new_position in snake_body:
+            new_node = Node(new_position, current_node)
+            new_node.g = current_node.g + 1
+            new_node.h = (new_position[0] - end_node.position[0]) ** 2 + (
+                new_position[1] - end_node.position[1]
+            ) ** 2
+            new_node.f = new_node.g + new_node.h
+
+            if any(
+                open_node.position == new_node.position and new_node.g > open_node.g
+                for open_node in open_list
+            ):
                 continue
 
-            new_node = Node(new_position, current_node)
-            children.append(new_node)
-
-        for child in children:
-            for closed_child in closed_list:
-                if child.position == closed_child.position:
-                    continue
-
-            child.g = current_node.g + 1
-            child.h = ((child.position[0] - end_node.position[0]) ** 2) + (
-                (child.position[1] - end_node.position[1]) ** 2
-            )
-            child.f = child.g + child.h
-
-            for open_node in open_list:
-                if child.position == open_node.position and child.g > open_node.g:
-                    continue
-
-            open_list.append(child)
+            heapq.heappush(open_list, new_node)
 
     return None
