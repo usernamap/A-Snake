@@ -1,3 +1,7 @@
-/__pycache__
+/__pycache__/*
+/ __pycache__/ai.cpython-311.pyc
+/__pycache__/game.cpython-311.pyc
 best_score.txt
 snake_game_ai.log
+profile_results.txt
+profile_stats
