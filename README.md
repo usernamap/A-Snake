@@ -1,4 +1,4 @@
-# Snake AI Project
+# A* playing Snake Project
 
 ## Description
 
@@ -15,7 +15,7 @@ Ce projet implémente une intelligence artificielle pour jouer au jeu Snake en u
 1. Clonez le dépôt sur votre machine locale :
 
     ```bash
-    git clone https://github.com/votre-utilisateur/snake-ai.git
+    git clone https://github.com/usernamap/A-Snake.git
     cd snake-ai
     ```
 
