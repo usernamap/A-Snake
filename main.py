@@ -3,6 +3,9 @@ from game import SnakeGame
 import sys
 from game_config import DISPLAY_MODE
 
+import cProfile
+import pstats
+
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "console":
@@ -17,4 +20,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    cProfile.run("main()", "profile_stats")
+
+    with open("profile_results.txt", "w") as f:
+        p = pstats.Stats("profile_stats", stream=f)
+        p.sort_stats("cumulative").print_stats(50)
