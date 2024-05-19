@@ -1,0 +1,60 @@
+Sun May 19 20:22:22 2024    profile_stats
+
+         101921 function calls in 0.485 seconds
+
+   Ordered by: cumulative time
+   List reduced from 100 to 50 due to restriction <50>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.485    0.485 {built-in method builtins.exec}
+        1    0.000    0.000    0.485    0.485 <string>:1(<module>)
+        1    0.000    0.000    0.485    0.485 /Users/root1/Desktop/A-Snake/main.py:10(main)
+        1    0.002    0.002    0.484    0.484 /Users/root1/Desktop/A-Snake/game.py:176(run_with_ai)
+      262    0.439    0.002    0.445    0.002 /Users/root1/Desktop/A-Snake/ai.py:15(astar)
+      564    0.001    0.000    0.025    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1610(_log)
+      261    0.003    0.000    0.024    0.000 /Users/root1/Desktop/A-Snake/game.py:73(run_step)
+      564    0.000    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1636(handle)
+      302    0.000    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:2140(info)
+      302    0.000    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1479(info)
+      564    0.001    0.000    0.014    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1690(callHandlers)
+      564    0.001    0.000    0.013    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:965(handle)
+      261    0.000    0.000    0.013    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:2150(debug)
+      261    0.000    0.000    0.012    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1467(debug)
+      564    0.000    0.000    0.012    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1216(emit)
+      564    0.001    0.000    0.012    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1098(emit)
+      564    0.000    0.000    0.007    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1595(makeRecord)
+      564    0.003    0.000    0.007    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:292(__init__)
+      564    0.001    0.000    0.006    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1087(flush)
+      564    0.000    0.000    0.005    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:942(format)
+      564    0.001    0.000    0.005    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:674(format)
+      564    0.004    0.000    0.004    0.000 {method 'flush' of '_io.TextIOWrapper' objects}
+      564    0.001    0.000    0.003    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:1561(findCaller)
+      564    0.003    0.000    0.003    0.000 {built-in method builtins.print}
+    13712    0.003    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/ai.py:7(__init__)
+      522    0.000    0.000    0.003    0.000 <__array_function__ internals>:177(norm)
+      261    0.000    0.000    0.003    0.000 /Users/root1/Desktop/A-Snake/game.py:102(move_snake)
+      522    0.000    0.000    0.002    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+      564    0.001    0.000    0.002    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:606(formatTime)
+      522    0.001    0.000    0.002    0.000 /opt/homebrew/lib/python3.11/site-packages/numpy/linalg/linalg.py:2342(norm)
+    33430    0.002    0.000    0.002    0.000 {method 'append' of 'list' objects}
+     2256    0.001    0.000    0.002    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:194(_is_internal_frame)
+       20    0.000    0.000    0.002    0.000 /Users/root1/Desktop/A-Snake/game.py:65(place_food)
+      564    0.000    0.000    0.001    0.000 <frozen posixpath>:117(splitext)
+      564    0.001    0.000    0.001    0.000 {built-in method time.strftime}
+      564    0.001    0.000    0.001    0.000 <frozen posixpath>:140(basename)
+      564    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:658(formatMessage)
+     2256    0.001    0.000    0.001    0.000 <frozen posixpath>:52(normcase)
+      564    0.001    0.000    0.001    0.000 <frozen genericpath>:121(_splitext)
+      564    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:447(format)
+     1128    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:922(acquire)
+      564    0.001    0.000    0.001    0.000 {built-in method time.localtime}
+     1044    0.001    0.000    0.001    0.000 {built-in method numpy.array}
+      564    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:652(usesTime)
+     1128    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:929(release)
+     4252    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+      564    0.000    0.000    0.000    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:440(_format)
+      522    0.000    0.000    0.000    0.000 {method 'dot' of 'numpy.ndarray' objects}
+      564    0.000    0.000    0.000    0.000 /opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/logging/__init__.py:432(usesTime)
+     1692    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+
+

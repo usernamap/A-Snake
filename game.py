@@ -7,12 +7,11 @@ import numpy as np
 
 # Logging setup
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.WARNING,  # Changez à WARNING au lieu de DEBUG pour moins de verbosité
     filename="snake_game_ai.log",
     filemode="w",
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
-
 try:
     import pygame
 except ImportError:
@@ -182,8 +181,11 @@ class SnakeGame:
                     path[1][0], path[1][1]
                 ) - pygame.math.Vector2(path[0][0], path[0][1])
                 reward, done = self.run_step(next_move)
-                logging.info(f"Path found. Next move: {next_move}. Reward: {reward}.")
-                print(f"Path found. Next move: {next_move}. Reward: {reward}.")
+                # Réduisez la fréquence des journaux d'information
+                if self.total_steps % 10 == 0:
+                    logging.info(
+                        f"Path found. Next move: {next_move}. Reward: {reward}."
+                    )
             else:
                 self.done = True
                 logging.warning("No path found. Ending game.")
@@ -198,5 +200,5 @@ class SnakeGame:
                 print(f"Game Over. Score: {self.score}, Best score: {self.best_score}")
                 break
 
-            if self.visualize and self.display_mode == "full":
+            if self.visualize and DISPLAY_MODE == "full":
                 self.update_screen()
