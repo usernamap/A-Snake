@@ -1,7 +1,7 @@
 # game_config.py
 # Paramètres de l'environnement de jeu
 TAILLE_CASE = 20  # Taille d'une case en pixels
-NB_CASES = 10  # Nombre de cases sur un côté de la grille
+NB_CASES = 20  # Nombre de cases sur un côté de la grille
 
 # Paramètres visuels
 COULEUR_SERPENT = (144, 238, 144)  # Vert clair
